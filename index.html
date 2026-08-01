@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astro Rescue</title>
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    #hud {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 10;
+    }
+
+    #health-container {
+      width: 200px;
+      height: 20px;
+      background: #333;
+      margin-top: 8px;
+    }
+
+    #health-bar {
+      width: 100%;
+      height: 100%;
+      background: #22cc44;
+    }
+
+    #damage-flash {
+      position: fixed;
+      inset: 0;
+      background: red;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    .screen {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 30;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="hud">
+    <div id="score-display">Score: 0</div>
+    <div id="rescue-display">Rescued: 0 / 5</div>
+    <div id="timer-display">Time: 50s</div>
+    <div id="enemy-display">Enemies: 4</div>
+
+    <div id="health-container">
+      <div id="health-bar"></div>
+    </div>
+
+    <div>Health: <span id="health-text">100</span></div>
+  </div>
+
+  <div id="damage-flash"></div>
+
+  <div id="game-over" class="screen">
+    <h1>Game Over</h1>
+    <p id="final-score"></p>
+    <button id="restart-btn">Restart</button>
+  </div>
+
+  <div id="you-won" class="screen">
+    <h1>You Won!</h1>
+    <p id="win-score"></p>
+    <button id="play-again-btn">Play Again</button>
+  </div>
+
+  <script type="module" src="/enemy-main.js"></script>
+</body>
+</html>
