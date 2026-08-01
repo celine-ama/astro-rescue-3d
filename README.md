@@ -2,6 +2,10 @@
 
 Astro Rescue 3D is an interactive space rescue game built with Three.js and JavaScript. The player pilots a spacecraft through a 3D environment, rescues astronauts, avoids asteroids and planets, collects health and oxygen, and fights enemy ships.
 
+## Live Demo
+
+[Play Astro Rescue 3D](https://celine-ama.github.io/astro-rescue-3d/)
+
 ## Gameplay
 
 ![Astro Rescue gameplay](./screenshots/gameplay-main.png)
